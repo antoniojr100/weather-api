@@ -21,6 +21,7 @@ function App() {
   // state that hold the current temperature and city that 
   const [ temp, setTemp] = useState('');
   const [ city,setCity ] = useState('');
+
   // this piece of state holds the user's input
   const [ userInput, setUserInput ] = useState('');
 
@@ -40,7 +41,6 @@ function App() {
       const data = await res.json();
 
       // console.log(data);
-
       // console.log(data.name);
 
       // the temperature rounded to the nearest whole number
@@ -72,25 +72,56 @@ function App() {
   }
   
   return (
-    <div className="App">
-      <h1>Weather API</h1>
-      <Form 
-        handleChange={handleChange}
-        userInput={userInput}
-        handleSubmit={handleSubmit}
-        searchError={searchError}
-      />
-      {
-        // use a ternary to check if there is an error, if there is: show error message, if not show temperature
-        searchError ? <p>Sorry, try your search again</p> : <p>The temperature in {city} is {temp}° celcius.</p>
-      }
-      {/* <p>The temperature in {city} is {temp}° celcius.</p> */}
-      
-      {
-        // userSearch && searchError === false ? <p>The temperature in {city} is {temp}° celcius.</p> : null
-      }
+    <html>
+      {/* <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
+      </head> */}
+      <body className="App">
+        {/* header starts */}
+        <header className="header">
+          <div className="wrapper">
+            <h1 className="text">Weather API</h1>
+          </div>
+        </header>
+        {/* header ends */}
 
-    </div>
+        {/* form starts */}
+        <section className="form-container">
+          <div className="wrapper">
+            <Form 
+              // functions
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+
+              // state
+              userInput={userInput}
+              searchError={searchError}
+            />
+
+            {
+              // use a ternary to check if there is an error, if there is: show error message, if not show temperature
+              searchError ? <p className="text">Sorry, try your search again</p> : <p className="text">The temperature in {city} is {temp}° celcius.</p>
+            }
+            {/* <p>The temperature in {city} is {temp}° celcius.</p> */}
+            
+            {
+              // userSearch && searchError === false ? <p>The temperature in {city} is {temp}° celcius.</p> : null
+            }
+          </div>
+        </section>
+        {/* form ends */}
+
+        {/* footer starts */}
+        <footer>
+          <div className="wrapper">
+            <p className="text">Created by Antonio Arredondo</p>
+          </div>
+        </footer>
+        {/* footer ends */}
+      </body>
+    </html>
   );
 }
 
