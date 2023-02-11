@@ -41,7 +41,6 @@ function App() {
       const data = await res.json();
 
       // console.log(data);
-      // console.log(data.name);
 
       // the temperature rounded to the nearest whole number
       setTemp(data.main.temp.toFixed());
@@ -73,11 +72,6 @@ function App() {
   
   return (
     <html>
-      {/* <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap" rel="stylesheet">
-      </head> */}
       <body className="App">
         {/* header starts */}
         <header className="header">
@@ -102,13 +96,9 @@ function App() {
 
             {
               // use a ternary to check if there is an error, if there is: show error message, if not show temperature
-              searchError ? <p className="text">Sorry, try your search again</p> : <p className="text">The temperature in {city} is {temp}° celcius.</p>
+              searchError ? <p className="form-text">Sorry, try your search again</p> : <p className="form-text">The temperature in <span className="city-name">{city}</span> is {temp}° celcius.</p>
             }
-            {/* <p>The temperature in {city} is {temp}° celcius.</p> */}
-            
-            {
-              // userSearch && searchError === false ? <p>The temperature in {city} is {temp}° celcius.</p> : null
-            }
+
           </div>
         </section>
         {/* form ends */}
@@ -116,7 +106,7 @@ function App() {
         {/* footer starts */}
         <footer>
           <div className="wrapper">
-            <p className="text">Created by Antonio Arredondo</p>
+            <p className="text">Created by <span className="name">Antonio Arredondo</span></p>
           </div>
         </footer>
         {/* footer ends */}

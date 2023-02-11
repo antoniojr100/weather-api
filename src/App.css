@@ -202,16 +202,15 @@ template {
 
 html {
   font-size: 125%;
-  background-color: #BFD7EA;
+  background-color: #0B3954;
 }
 html body {
   font-family: "Noto Sans", sans-serif;
 }
 html body h1,
 html body p,
-html body label,
 html body button {
-  color: #0B3954;
+  color: #BFD7EA;
 }
 html .wrapper {
   width: 80%;
@@ -220,23 +219,76 @@ html .wrapper {
 
 .header h1 {
   text-align: center;
-  font-size: 3rem;
+  font-size: 3.2rem;
 }
 
 .form-container {
   text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  border: 8px solid #4d9d7f;
+  border-radius: 20px;
+  padding: 50px 0;
+  background-color: #A2D3C2;
+  color: #0B3954;
 }
 .form-container button {
-  background-color: #20b7f8;
-  border: none;
+  background-color: #4d9d7f;
+  color: #0B3954;
+  border: 3px solid #0B3954;
   border-radius: 25px;
   padding: 5px 15px;
+  margin: 20px;
   transition: 0.5s;
+  font-weight: 700;
 }
 .form-container button:hover {
+  background-color: #0B3954;
+  color: #4d9d7f;
+  border: 3px solid #4d9d7f;
   transition: 0.5s;
+}
+.form-container input {
+  padding: 5px 0 5px 0;
+  border: 1px solid;
+  text-align: center;
+  background-color: #BFD7EA;
+  font-weight: 700;
+}
+.form-container .form-text {
+  color: #0B3954;
+}
+.form-container .city-name {
+  font-weight: 700;
 }
 
 footer {
   text-align: center;
+}
+footer .name:hover {
+  font-weight: 700;
+}
+
+@media (max-width: 804px) {
+  .form-container input {
+    margin: 20px auto 0 auto;
+  }
+}
+@media (max-width: 520px) {
+  .form-container input {
+    width: 225px;
+  }
+}
+@media (max-width: 520px) {
+  .form-container input {
+    width: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .header h1 {
+    font-size: 2.8rem;
+  }
+  .form-container input {
+    width: 175px;
+  }
 }/*# sourceMappingURL=App.css.map */
