@@ -81,6 +81,12 @@ function App() {
         </header>
         {/* header ends */}
 
+        <section className="welcome-message">
+          <div className="wrapper">
+            <p className="welcome-text">Welcome to the weather API! Enter the name of any city to find out the current temperature of the city.</p>
+          </div>
+        </section>
+
         {/* form starts */}
         <section className="form-container">
           <div className="wrapper">

@@ -202,7 +202,7 @@ template {
 
 html {
   font-size: 125%;
-  background-color: #0B3954;
+  background-color: #012439;
 }
 html body {
   font-family: "Noto Sans", sans-serif;
@@ -222,6 +222,10 @@ html .wrapper {
   font-size: 3.2rem;
 }
 
+.welcome-message {
+  text-align: center;
+}
+
 .form-container {
   text-align: center;
   width: 70%;
@@ -230,12 +234,12 @@ html .wrapper {
   border-radius: 20px;
   padding: 50px 0;
   background-color: #A2D3C2;
-  color: #0B3954;
+  color: #012439;
 }
 .form-container button {
   background-color: #4d9d7f;
-  color: #0B3954;
-  border: 3px solid #0B3954;
+  color: #012439;
+  border: 3px solid #012439;
   border-radius: 25px;
   padding: 5px 15px;
   margin: 20px;
@@ -243,7 +247,7 @@ html .wrapper {
   font-weight: 700;
 }
 .form-container button:hover {
-  background-color: #0B3954;
+  background-color: #012439;
   color: #4d9d7f;
   border: 3px solid #4d9d7f;
   transition: 0.5s;
@@ -256,7 +260,7 @@ html .wrapper {
   font-weight: 700;
 }
 .form-container .form-text {
-  color: #0B3954;
+  color: #012439;
 }
 .form-container .city-name {
   font-weight: 700;
